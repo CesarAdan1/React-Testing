@@ -41,19 +41,32 @@ class App extends Component {
       <div>
         <h2>Note to self</h2>
         <Form inline> 
-            <FormControl onChange={e =>this.setState({ text: e.target.value})} />
+            <FormControl 
+              onChange={e =>this.setState({ text: e.target.value})} 
+            />
             {' '}
-            <Button onClick={() => this.submit()}>Submit</Button>
+            <Button 
+              onClick={() => this.submit()}
+              >
+              Submit
+            </Button>
         </Form>
         { 
           this.state.notes.map((note, index) => {
             return (
-              <Note key={index} note={note} />
+              <Note 
+                key={index} 
+                note={note} 
+              />
             )
           })
         }
         <hr />
-        <Button onClick={() => this.clear()}>Clear Notes</Button>
+        <Button 
+          onClick={() => this.clear()}
+        >
+        Clear Notes
+        </Button>
       </div>
     )
   }
