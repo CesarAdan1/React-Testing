@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, FormControl, Button } from 'react-bootstrap';
+import Note from './Note'
 
 
 class App extends Component {
@@ -32,7 +33,7 @@ class App extends Component {
         { 
           this.state.notes.map((note, index) => {
             return (
-              <div key={index}>{note.text}</div>
+              <Note key={index} note={note} />
             )
           })
         }
