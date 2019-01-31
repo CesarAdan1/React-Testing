@@ -5,15 +5,6 @@ import Note from './Note';
 //passing props
 const props = { note: { text: 'test note'}}
 
-console.log({...props});
-
-const triplePrint = (a, b, c) => {
-    console.log(`${a} ${b} ${c}`);
-}
-
-const message = ['react', 'is', 'awesome'];
-
-triplePrint(...message);
 //specify the descirption of the test
 describe('Note', () => {
     //spread atributes
